@@ -1,0 +1,21 @@
+.additional__wrapper {
+  @include container();
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(98, 105, 98, 0.2);
+
+  & p, & a {
+    @include font($font: $text, $size: 13px, $height: 24px);
+
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    color: $light-black;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+}

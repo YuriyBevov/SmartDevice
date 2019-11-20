@@ -1,0 +1,28 @@
+.contacts__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 335px;
+}
+
+.contacts__text {
+  @include font($font: $title, $size: 15px, $height: 16px);
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1B2D37;
+}
+
+.contacts__address {
+  @include font($font: $text, $size: 15px, $height: 25px);
+
+  font-style: normal;
+  opacity: 0.5;
+  color: $light-black;
+}
+
+.contacts__phone {
+  text-decoration: none;
+  opacity: 0.5;
+  color: $light-black;
+}

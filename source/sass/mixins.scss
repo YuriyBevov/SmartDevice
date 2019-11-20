@@ -1,0 +1,10 @@
+@mixin font($font, $size, $height) {
+  font-family: $font;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin container() {
+  max-width: 1420px;
+  margin: 0 auto;
+}

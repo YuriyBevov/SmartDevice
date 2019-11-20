@@ -1,0 +1,26 @@
+.sections__text {
+  @include font($font: $title, $size: 15px, $height: 16px);
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1B2D37;
+}
+
+.sections__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+
+.sections__item {
+  @include font($font: $text, $size: 15px, $height: 25px);
+
+  min-width: 170px;
+  max-width: 250px;
+  opacity: 0.5;
+  color: $light-black;
+}
