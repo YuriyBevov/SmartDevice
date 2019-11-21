@@ -1,11 +1,66 @@
-/*.board {
-  background-color: ;
-  background-image: url('../img/.jpg');
-  background-size: ;
-  background-position: ;
+.board__wrapper {
+  position: relative;
+  padding-top: 179px;
+  padding-left: 8px;
+}
 
-  @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
-    background-image: url("../img/.jpg");
-    background-size: ;
+.board__title {
+  @include font($font: $bold, $size: 80px, $height: 94px);
+
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 27px;
+  color: $white;
+}
+
+.board__description {
+  @include font($font: $text, $size: 22px, $height: 34px);
+
+  position: relative;
+  max-width: 777px;
+  padding-left: 97px;
+  margin: 0;
+  margin-bottom: 44px;
+  color: $white;
+
+  //outline: 1px solid red;
+
+  &:before {
+    position: absolute;
+    top: 17px;
+    left: 3px;
+    width: 66px;
+    height: 2px;
+
+    content: "";
+    background-color: $white;
   }
-}*/
+}
+
+.board__small {
+
+  @include font($font: $text, $size: 14px, $height: 16px);
+
+  position: absolute;
+  bottom: -148px;
+  left: -27px;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+  color: $white;
+}
+
+.board__btn {
+  @include font($font: $bold, $size: 16px, $height: 19px);
+
+  width: 407px;
+  min-height: 55px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  margin-left: 97px;
+  cursor: pointer;
+  background-color: $blue;
+  color: $white;
+}

@@ -14,13 +14,13 @@
 
   <header class="header">
     <div class="header__wrapper">
-      <div class="logo">
-        <div class="logo__wrapper">
-          <b class="logo__title">Smart Device</b>
-          <p class="logo__description">умные технологии</p>
-        </div>
-      </div>
       <nav class="nav">
+        <div class="logo">
+          <div class="logo__wrapper">
+            <b class="logo__title">Smart Device</b>
+            <p class="logo__description">умные технологии</p>
+          </div>
+        </div>
         <ul class="nav__list">
           <li class="nav__item nav__item--mail">
             <a href="mailto:info@sd.ru" class="nav__link nav__link--mail">info@sd.ru</a>
@@ -33,20 +33,20 @@
           </li>
         </ul>
       </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="board">
+    <div class="board">
       <div class="board__wrapper">
         <h1 class="board__title">Печатные платы</h1>
         <p class="board__description">
           производство и монтаж, поставка комплектующих, блоков и модулей
         </p>
-        <small>Скролл вниз</small>
+        <small class="board__small">Скролл вниз</small>
         <button class="board__btn">Получить бесплатную консультацию</button>
       </div>
-    </section>
+    </div>
+    </div>
+  </header>
+
+  <main>
     <section class="presentation">
       <div class="presentation__wrapper">
         <h2 class="presentation__title visually-hidden">Презентация компании Smart Device</h2>
@@ -110,9 +110,18 @@
           Service Device предлагает следующие товары и услуги
         </p>
         <ul class="products__list">
-          <li class="products__item"><a href="#" class="products__link">Производство печатных плат</a></li>
-          <li class="products__item"><a href="#" class="products__link">Монтаж печатных плат</a></li>
-          <li class="products__item"><a href="#" class="products__link">Комплектующие для светотехники</a></li>
+          <li class="products__item products__item--production">
+            <a href="#" class="products__link"><p class="products__text">Производство печатных плат</p></a>
+            <div class="products__more"><span class="visually-hidden">"Подробнее"</span></div>
+          </li>
+          <li class="products__item products__item--mounting">
+            <a href="#" class="products__link"><p class="products__text">Монтаж печатных плат</p></a>
+            <div class="products__more"><span class="visually-hidden">"Подробнее"</span></div>
+          </li>
+          <li class="products__item products__item--components">
+            <a href="#" class="products__link"><p class="products__text">Комплектующие для светотехники</p></a>
+            <div class="products__more"><span class="visually-hidden">"Подробнее"</span></div>
+          </li>
         </ul>
       </div>
     </section>
@@ -167,25 +176,25 @@
           <p class="sections__text">Разделы сайта</p>
           <ul class="sections__list">
             <li class="sections__item">
-              О компании
+              <a href="#" class="sections__link">О компании</a>
             </li>
             <li class="sections__item">
-              Комплектующие
+              <a href="#" class="sections__link">Комплектующие</a>
             </li>
             <li class="sections__item">
-              Продукты              
+              <a href="#" class="sections__link">Продукты</a>
             </li>
             <li class="sections__item">
-              Доставка
+              <a href="#" class="sections__link">Доставка</a>
             </li>
             <li class="sections__item">
-              Производство печатных плат
+              <a href="#" class="sections__link">Производство печатных плат</a>
             </li>
             <li class="sections__item">
-              Контакты
+              <a href="#" class="sections__link">Контакты</a>
             </li>
             <li class="sections__item">
-              Монтаж печатных плат
+              <a href="#" class="sections__link">Монтаж печатных плат</a>
             </li>
           </ul>
         </div>

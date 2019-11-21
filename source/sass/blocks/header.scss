@@ -1,9 +1,22 @@
+.header {
+    background-color: rgb(27, 45, 55);;
+    //background-image: url('../img/main-background1x.jpg');
+    //background-size: cover;
+    //background-position: ;
+
+    /*@media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/main-background2x.jpg");
+      background-size: ;
+    }*/
+}
+
 .header__wrapper {
   @include container();
+  min-height: 950px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+
   padding-top: 20px;
-  outline: 1px solid red;
+  //outline: 1px solid red;
 }

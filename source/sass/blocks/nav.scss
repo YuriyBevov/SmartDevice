@@ -1,16 +1,21 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .nav__list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  outline: 1px solid green;
-  background-color: lightgrey; //temp
+  margin: 0;
+  padding-top: 20px;
+  //outline: 1px solid green;
 }
 
 .nav__item {
   position: relative;
-//  margin-right: 20px;
 
   &--mail {
     margin-right: 82px;
@@ -29,7 +34,7 @@
   }
 
   &--phone {
-    margin-right: 50px;
+    margin-right: 47px;
 
     &:before {
       position: absolute;
@@ -43,8 +48,6 @@
       background-repeat: no-repeat;
     }
   }
-
-
 }
 
 .nav__link {
@@ -67,7 +70,7 @@
   @include font($font: $bold, $size: 14px, $height: 16px);
 
   width: 180px;
-  min-height: 45px; // не по макету пока
+  min-height: 45px;
   padding: 0;
   border: 1px solid $white;
   border-radius: 5px;
@@ -75,6 +78,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
+  background-color: transparent;
   color: $white;
 }
 

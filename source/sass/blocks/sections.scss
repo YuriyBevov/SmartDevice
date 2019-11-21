@@ -17,10 +17,14 @@
 }
 
 .sections__item {
-  @include font($font: $text, $size: 15px, $height: 25px);
-
   min-width: 170px;
   max-width: 250px;
+}
+
+.sections__link {
+  @include font($font: $text, $size: 15px, $height: 25px);
+
+  text-decoration: none;
   opacity: 0.5;
   color: $light-black;
 }
