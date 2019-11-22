@@ -1,0 +1,113 @@
+.presentation__wrapper {
+  @include container();
+  padding: 105px 125px;
+  outline: 1px solid red;
+}
+
+.presentation__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 95px;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.presentation__item {
+  position: relative;
+  width: 48.8%;
+  border: 1px solid #EBEBEB;
+  border-left: 3px solid $blue;
+  margin-bottom: 30px;
+  padding-left: 45px;
+  padding-top: 98px;
+  padding-bottom: 65px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+
+  &:hover,
+  &:focus {
+    background-color: $blue;
+
+    .presentation__theme {
+      color: $white;
+    }
+
+    .presentation__description {
+      color: $white;
+    }
+  }
+
+  &--stopwatch {
+    &:before {
+      position: absolute;
+      top: 45px;
+      left: 45px;
+      width: 29px;
+      height: 35px;
+      content: "";
+      background: url("../img/stopwatch.svg");
+      background-size: 29px 35px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--hired {
+    &:before {
+      position: absolute;
+      top: 45px;
+      left: 45px;
+      width: 35px;
+      height: 35px;
+      content: "";
+      background: url("../img/hired.svg");
+      background-size: 35px 35px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--detective {
+    &:before {
+      position: absolute;
+      top: 45px;
+      left: 45px;
+      width: 36px;
+      height: 31px;
+      content: "";
+      background: url("../img/detective.svg");
+      background-size: 36px 31px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--tag {
+    &:before {
+      position: absolute;
+      top: 45px;
+      left: 45px;
+      width: 35px;
+      height: 35px;
+      content: "";
+      background: url("../img/tag.svg");
+      background-size: 35px 35px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.presentation__theme {
+  @include font($font: $title, $size: 24px, $height: 34px);
+
+  margin: 0;
+  margin-bottom: 15px;
+  color: $blue;
+}
+
+.presentation__description {
+  @include font($font: $text, $size: 16px, $height: 22px);
+
+  margin: 0;
+  color: $primary-grey;
+  transition: color 0.6s
+}

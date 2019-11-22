@@ -1,10 +1,14 @@
+.additional {
+  border-top: 1px solid rgba(98, 105, 98, 0.2);
+}
+
 .additional__wrapper {
   @include container();
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid rgba(98, 105, 98, 0.2);
+  padding-left: 10px;
 
   & p, & a {
     @include font($font: $text, $size: 13px, $height: 24px);

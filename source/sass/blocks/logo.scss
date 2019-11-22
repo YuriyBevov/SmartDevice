@@ -18,6 +18,10 @@
   }
 }
 
+.logo__wrapper--footer {
+  margin-bottom: 3px;
+}
+
 .logo__title {
   @include font($font: $bold, $size: 25px, $height: 29px);
 
@@ -27,7 +31,7 @@
   color: $white;
 
   &--footer {
-      color: #203C42;
+      color:$logo-footer;
   }
 }
 

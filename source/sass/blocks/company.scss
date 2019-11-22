@@ -1,0 +1,56 @@
+.company__wrapper {
+  position: relative;
+  padding-left: 177px;
+
+
+  &:before {
+    position: absolute;
+    top: 4px;
+    left: -30px;
+    width: 150px;
+    height: 317px;
+    content: "";
+    background-image: url(../img/year1x.jpg);
+    background-size: 220px 317px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .company__wrapper:before {
+    background-image: url("../img/year2x.jpg");
+    background-size: cover;
+  }
+}
+
+.company__title {
+  @include font($font: $title, $size: 36px, $height: 51px);
+
+  margin: 0;
+  margin-bottom: 17px;
+  color: $primary-grey;
+}
+
+.company__description {
+  @include font($font: $text, $size: 16px, $height: 22px);
+
+  margin: 0;
+  margin-bottom: 40px;
+  color: $primary-grey;
+}
+
+.company__btn {
+  @include font($font: $bold, $size: 14px, $height: 16px);
+
+  width: 180px;
+  min-height: 45px;
+  border: none;
+  padding: 0;
+  border: 1px solid $blue;
+  border-radius: 5px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: $blue;
+}

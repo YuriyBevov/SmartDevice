@@ -1,24 +1,30 @@
-.nav {
-  display: flex;
-  justify-content: space-between;
-}
+/*
 
+<div class="info">
+  <a href="mailto:info@sd.ru" class="info__link info__link--mail">info@sd.ru</a>
+  <a href="tel:+7(495)0005252" class="info__link info__link--phone">+7 (495) 000 52 52</a>
+  <button type="button" class="info__btn">Заказать звонок</button>
+</div>
 
-.nav__list {
+.info {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding-top: 20px;
-  //outline: 1px solid green;
 }
 
-.nav__item {
+.info__link {
+  @include font($font: $text, $size: 16px, $height: 18px);
   position: relative;
+  text-decoration: none;
+  padding-left: 40px;
+  color: $white;
 
   &--mail {
-    margin-right: 82px;
+    width: 148px;
+    margin-right: 70px;
 
     &:before {
       position: absolute;
@@ -34,7 +40,8 @@
   }
 
   &--phone {
-    margin-right: 47px;
+    width: 230px;
+    margin-right: 29px;
 
     &:before {
       position: absolute;
@@ -48,25 +55,11 @@
       background-repeat: no-repeat;
     }
   }
+
+
 }
 
-.nav__link {
-  @include font($font: $text, $size: 16px, $height: 18px);
-  position: relative;
-  text-decoration: none;
-  padding-left: 40px;
-  color: $white;
-
-  &--mail {
-    width: 250px;
-  }
-
-  &--phone {
-    width: 250px;
-  }
-}
-
-.nav__btn {
+.info__btn {
   @include font($font: $bold, $size: 14px, $height: 16px);
 
   width: 180px;
@@ -83,34 +76,11 @@
 }
 
 @media(max-width: 1024px) {
-  .nav__item {
-    &--mail {
-      &:before{
-        width: 25.33px;
-        height: 18.67px;
-        background-size: 25.33px 18.67px;;
-      }
-    }
-    &--phone {
-      &:before{
-        width: 24px;
-        height: 24px;
-        background-size: 24px 24px;
-      }
-    }
-  }
-  .nav__link {
+  .info__link {
+
+    &--mail, &--phone {
     display: none;
-
-    &--mail {
-
     }
-
-    &--phone {
-
-    }
-  }
-  .nav__btn {
-    display: none;
   }
 }
+*/

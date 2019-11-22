@@ -5,11 +5,13 @@
 @import "mixins";
 
 @import "blocks/header";
-@import "blocks/logo";
 @import "blocks/nav";
+@import "blocks/logo";
+//@import "blocks/info";
 
 @import "blocks/board";
 @import "blocks/presentation";
+@import "blocks/company";
 @import "blocks/products";
 @import "blocks/question";
 
