@@ -11,7 +11,6 @@
   align-items: center;
   margin: 0;
   padding-top: 20px;
-  //outline: 1px solid green;
 }
 
 .nav__item {
@@ -83,18 +82,25 @@
 }
 
 @media(max-width: 1024px) {
+
+  .nav__list {
+    padding-top: 0;
+  }
   .nav__item {
     &--mail {
       &:before{
         width: 25.33px;
         height: 18.67px;
-        background-size: 25.33px 18.67px;;
+        top: -1px;
+        left: 29px;
+        background-size: 25.33px 18.67px;
       }
     }
     &--phone {
       &:before{
         width: 24px;
         height: 24px;
+        top: -4px;
         background-size: 24px 24px;
       }
     }
@@ -112,5 +118,30 @@
   }
   .nav__btn {
     display: none;
+  }
+}
+
+@media(max-width: $tablet-width) {
+  .nav {
+    width: 100%;
+  }
+
+  .nav__list {
+    padding-top: 20px;
+  }
+
+  .nav__item {
+    &--mail {
+      &:before{
+        top: 0;
+        left: -30px;
+      }
+    }
+    &--phone {
+      &:before{
+        top: -5px;
+        left: 19px;
+      }
+    }
   }
 }

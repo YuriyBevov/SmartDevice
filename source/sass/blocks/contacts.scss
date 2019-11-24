@@ -30,3 +30,44 @@
   opacity: 0.5;
   color: $light-black;
 }
+
+@media(max-width: $desktop-width) {
+  .contacts__text {
+    padding-left: 2px;
+  }
+
+}
+@media(max-width: $tablet-width) {
+  .contacts {
+    border-top: 1px solid rgba(98, 105, 98, 0.2);
+  }
+  .contacts__wrapper {
+    padding-top: 11px;
+    padding-left: 15px;
+    margin: 0 auto;
+  }
+
+  .contacts__text {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 0;
+    width: 290px;
+
+    &:after {
+      position: absolute;
+      top: 17px;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      content: "";
+      cursor: pointer;
+      background-image: url("../img/minus.svg");
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .contacts__address {
+    width: 280px;
+  }
+}

@@ -35,3 +35,29 @@
 .additional__conditions {
   flex-grow: 5.7;
 }
+
+@media(max-width: $desktop-width) {
+  .additional__wrapper {
+    padding: 21px 27px;
+  }
+
+  .additional__rights {
+    display: none;
+  }
+
+  .additional__company {
+    display: none;
+  }
+}
+@media(max-width: $tablet-width) {
+  .additional__wrapper {
+    flex-direction: column;
+    padding: 0;
+    padding-top: 28px;
+    align-items: center;
+  }
+
+  .additional__conditions {
+    margin-bottom: 21px;
+  }
+}

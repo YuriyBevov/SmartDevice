@@ -1,6 +1,7 @@
 .company__wrapper {
   position: relative;
-  padding-left: 177px;
+  padding-left: 178px;
+  padding-right: 15px;
 
 
   &:before {
@@ -29,14 +30,24 @@
   margin: 0;
   margin-bottom: 17px;
   color: $primary-grey;
+  padding-left: 2px;
+  font-weight: normal;
 }
 
 .company__description {
   @include font($font: $text, $size: 16px, $height: 22px);
 
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 21px;
   color: $primary-grey;
+
+  &--ellipsis {
+    display: none;
+  }
+
+  &--partners {
+    margin-bottom: 41px;
+  }
 }
 
 .company__btn {
@@ -46,6 +57,7 @@
   min-height: 45px;
   border: none;
   padding: 0;
+  margin-left: 2px;
   border: 1px solid $blue;
   border-radius: 5px;
   text-align: center;
@@ -53,4 +65,65 @@
   text-transform: uppercase;
   background-color: transparent;
   color: $blue;
+}
+
+@media(max-width: $desktop-width) {
+  .company__wrapper {
+    padding-left: 188px;
+    padding-right: 0;
+  }
+
+  .company__title {
+    @include font($font: $title, $size: 32px, $height: 45px);
+
+    margin-left: -5px;
+    margin-bottom: 25px;
+  }
+
+  .company__description {
+    margin-bottom: 19px;
+
+    &--more {
+      display: none;
+    }
+
+    &--ellipsis {
+      display: inline-block;
+    }
+
+    &--partners {
+      margin-bottom: 43px;
+    }
+  }
+
+  .company__btn {
+    margin-left: 0;
+  }
+}
+@media(max-width: $tablet-width) {
+  .company__wrapper {
+    padding-left: 2px;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .company__title {
+    @include font($font: $title, $size: 28px, $height: 39px);
+
+    margin-bottom: 20px;
+  }
+
+  .company__description {
+    margin-bottom: 41px;
+
+    &--partners {
+      margin-bottom: 28px;
+    }
+  }
+
+  .company__btn {
+    margin-bottom: 64px;
+  }
 }

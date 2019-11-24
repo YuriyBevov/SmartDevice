@@ -1,7 +1,6 @@
 .logo__wrapper {
   position: relative;
   width: 250px;
-  //outline: 1px solid green;
   padding-top: 23px;
   padding-left: 80px;
 
@@ -20,6 +19,7 @@
 
 .logo__wrapper--footer {
   margin-bottom: 3px;
+  padding-left: 78px;
 }
 
 .logo__title {
@@ -32,6 +32,8 @@
 
   &--footer {
       color:$logo-footer;
+      display: block;
+      margin-bottom: 1px;
   }
 }
 
@@ -41,4 +43,41 @@
   margin: 0;
   font-weight: 500;
   color: $light-grey;
+}
+
+@media(max-width: $tablet-width) {
+  .logo__wrapper {
+
+    &:before {
+    top: 12px;
+    left: 5px;
+    width: 38px;
+    height: 38px;
+    background-size: 38px 38px;
+    }
+  }
+
+  .logo__title,
+  .logo__description {
+    display: none;
+  }
+
+  .logo__wrapper--footer {
+    padding-left: 74px;
+    padding-top: 18px;
+    margin-bottom: 67px;
+
+    & .logo__title,
+    & .logo__description {
+      display: block;
+    }
+
+    &:before {
+    top: 12px;
+    left: 5px;
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+    }
+  }
 }

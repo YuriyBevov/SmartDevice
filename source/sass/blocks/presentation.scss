@@ -1,7 +1,6 @@
 .presentation__wrapper {
   @include container();
-  padding: 105px 125px;
-  outline: 1px solid red;
+  padding: 105px 115px 109px 133px;
 }
 
 .presentation__list {
@@ -9,7 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  margin-bottom: 95px;
+  margin-bottom: 75px;
   padding: 0;
   justify-content: space-between;
 }
@@ -17,14 +16,42 @@
 .presentation__item {
   position: relative;
   width: 48.8%;
+  min-height: 299px;
   border: 1px solid #EBEBEB;
   border-left: 3px solid $blue;
   margin-bottom: 30px;
-  padding-left: 45px;
-  padding-top: 98px;
-  padding-bottom: 65px;
+  padding: 39px 10px 65px 42px;
   cursor: pointer;
   transition: background-color 0.5s;
+
+  &--detective {
+    padding-top: 43px;
+  }
+
+  & svg {
+    fill: $blue;
+    margin-bottom: 16px;
+  }
+
+  &-icon--stopwatch {
+    width: 29px;
+    height: 35px;
+  }
+
+  &-icon--hired {
+    width: 35px;
+    height: 35px;
+  }
+
+  &-icon--detective {
+    width: 36px;
+    height: 31px;
+  }
+
+  &-icon--tag {
+    width: 35px;
+    height: 35px;
+  }
 
   &:hover,
   &:focus {
@@ -37,61 +64,9 @@
     .presentation__description {
       color: $white;
     }
-  }
 
-  &--stopwatch {
-    &:before {
-      position: absolute;
-      top: 45px;
-      left: 45px;
-      width: 29px;
-      height: 35px;
-      content: "";
-      background: url("../img/stopwatch.svg");
-      background-size: 29px 35px;
-      background-repeat: no-repeat;
-    }
-  }
-
-  &--hired {
-    &:before {
-      position: absolute;
-      top: 45px;
-      left: 45px;
-      width: 35px;
-      height: 35px;
-      content: "";
-      background: url("../img/hired.svg");
-      background-size: 35px 35px;
-      background-repeat: no-repeat;
-    }
-  }
-
-  &--detective {
-    &:before {
-      position: absolute;
-      top: 45px;
-      left: 45px;
-      width: 36px;
-      height: 31px;
-      content: "";
-      background: url("../img/detective.svg");
-      background-size: 36px 31px;
-      background-repeat: no-repeat;
-    }
-  }
-
-  &--tag {
-    &:before {
-      position: absolute;
-      top: 45px;
-      left: 45px;
-      width: 35px;
-      height: 35px;
-      content: "";
-      background: url("../img/tag.svg");
-      background-size: 35px 35px;
-      background-repeat: no-repeat;
+    & svg{
+      fill: $white;
     }
   }
 }
@@ -109,5 +84,135 @@
 
   margin: 0;
   color: $primary-grey;
-  transition: color 0.6s
+  transition: color 0.6s;
+  padding-right: 35px;
+}
+
+@media(max-width: $desktop-width) {
+  .presentation__wrapper {
+    padding: 51px 25px 82px;
+  }
+
+  .presentation__item {
+    width: 48%;
+    padding: 25px 10px 19px 25px;
+    min-height: 100%;
+
+    & svg {
+      margin-bottom: 3px;
+    }
+
+    &--hired svg {
+      width: 31.72px;
+      height: 32.18px;
+      margin-bottom: 5px;
+    }
+
+    &--detective,
+    &--tag {
+      min-height: 232px;
+    }
+
+    &--tag {
+      & .presentation__theme {
+        margin-bottom: 5px;
+      }
+
+      & svg {
+        width: 32.18px;
+        height: 32.18px;
+        margin-bottom: 6px;
+      }
+    }
+
+    &--detective {
+      padding-top: 26px;
+      padding-left: 25px;
+
+      & .presentation__theme {
+        margin-bottom: 15px;
+      }
+
+      & svg {
+        width: 30.31px;
+        height: 26.1px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .presentation__theme {
+    @include font($font: $title, $size: 24px, $height: 34px);
+
+    margin-bottom: 9px;
+  }
+
+  .presentation__list {
+    margin-bottom: 27px;
+  }
+
+  .presentation__description {
+    padding-right: 15px;
+  }
+}
+
+@media(max-width: $tablet-width) {
+  .presentation__wrapper {
+    padding: 33px 15px 0;
+  }
+
+  .presentation__list {
+    flex-direction: column;
+    margin-bottom: 37px;
+  }
+
+  .presentation__item {
+    width: 100%;
+    padding: 25px 10px 25px 25px;
+    margin-bottom: 20px;
+
+    & svg {
+      margin-bottom: 8px;
+    }
+
+    &--stopwatch {
+      & svg {
+        width: 29.28px;
+        height: 35.46px;
+      }
+    }
+
+    &--hired {
+      padding-bottom: 22px;
+      padding-top: 21px;
+
+      & svg {
+        margin-bottom: 12px;
+      }
+    }
+
+    &--detective {
+      padding-top: 28px;
+    }
+
+    &--tag {
+      padding-top: 26px;
+      padding-left: 26px;
+
+      & .presentation__theme {
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+  .presentation__theme {
+    @include font($font: $title, $size: 20px, $height: 28px);
+
+    width: 95%;
+    margin-bottom: 9px;
+  }
+
+  .presentation__description {
+    padding-right: 5px;
+  }
 }

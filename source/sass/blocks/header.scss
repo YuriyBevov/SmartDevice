@@ -1,22 +1,37 @@
 .header {
-    background-color: rgb(27, 45, 55);;
-    //background-image: url('../img/main-background1x.jpg');
-    //background-size: cover;
-    //background-position: ;
+  position: relative;
+    background-color: rgb(27, 45, 55);
+    background-image: url('../img/main1x.jpg');
+    background-size: cover;
+    background-position: 100%;
 
-    /*@media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
-      background-image: url("../img/main-background2x.jpg");
-      background-size: ;
-    }*/
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/main2x.jpg");
+    }
 }
 
 .header__wrapper {
   @include container();
-  min-height: 950px;
+  min-height: 885px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
   padding-top: 20px;
-  //outline: 1px solid red;
+}
+
+@media(max-width: $desktop-width) {
+  .header__wrapper {
+    min-height: 691px;
+    padding-top: 7px;
+    padding-left: 14px;
+    padding-right: 8px;
+  }
+}
+
+@media(max-width: $tablet-width) {
+  .header__wrapper {
+    min-height: 652px;
+  //  padding-top: 7px;
+  //  padding-left: 14px;
+  }
 }

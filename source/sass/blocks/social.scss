@@ -15,3 +15,17 @@
     margin-right: 0;
   }
 }
+
+@media(max-width: $desktop-width) {
+  .social__list {
+    padding-top: 18px;
+  }
+}
+@media(max-width: $tablet-width) {
+  .social {
+    margin-left: -24px;
+  }
+  .social__list {
+    padding-left: 0;
+  }
+}

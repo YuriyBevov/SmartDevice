@@ -23,8 +23,6 @@
   margin-bottom: 44px;
   color: $white;
 
-  //outline: 1px solid red;
-
   &:before {
     position: absolute;
     top: 17px;
@@ -59,8 +57,96 @@
   text-transform: uppercase;
   border-radius: 5px;
   border: none;
+  padding: 0;
   margin-left: 97px;
   cursor: pointer;
   background-color: $blue;
   color: $white;
+
+  &--mobile {
+    display: none;
+  }
+}
+
+@media(max-width: $desktop-width) {
+  .board__wrapper {
+    padding-top: 79px;
+    padding-left: 75px;
+  }
+
+  .board__title {
+    @include font($font: $bold, $size: 60px, $height: 70px);
+    max-width: 400px;
+    margin-bottom: 29px;
+  }
+
+  .board__description {
+    @include font($font: $text, $size: 18px, $height: 28px);
+
+    max-width: 410px;
+    padding-left: 50px;
+    margin-bottom: 55px;
+
+    &:before {
+      width: 33px;
+      height: 2px;
+    }
+  }
+
+  .board__small {
+    display: none;
+  }
+
+  .board__btn {
+    width: 379px;
+    margin-left: 51px;
+
+    &--mobile {
+      display: none;
+    }
+  }
+}
+
+@media(max-width: $tablet-width) {
+  .board__wrapper {
+    padding-top: 232px;
+    padding-left: 3px;
+  }
+
+  .board__title {
+    @include font($font: $bold, $size: 40px, $height: 47px);
+    max-width: 275px;
+    margin-bottom: 26px;
+  }
+
+  .board__description {
+    @include font($font: $text, $size: 16px, $height: 25px);
+
+    min-width: 275px;
+    padding-left: 50px;
+    margin-bottom: 40px;
+
+    &:before {
+      width: 33px;
+      height: 2px;
+    }
+  }
+
+  .board__small {
+    display: none;
+  }
+
+  .board__btn {
+    display: none;
+    width: 287px;
+    margin-left: 3px;
+
+    .board__btn-additional {
+      display: none;
+    }
+  }
+
+  .board__btn--mobile {
+    display: block;
+  }
 }

@@ -7,7 +7,6 @@
   @include container();
   padding: 89px 0 125px;
   padding-left: 134px;
-  //outline: 1px solid red;
 }
 
 .products__description {
@@ -24,9 +23,7 @@
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0;
-  //outline: 1px solid blue;
-}
+  padding: 0;}
 
 .products__item {
   position: relative;
@@ -35,8 +32,6 @@
   background-size: cover;
   background-position: 50% 50%;
   margin-right: 30px;
-
-  // outline: 1px solid yellow;
 
   &--production {
     background-image: url("../img/production1x.jpg");
@@ -77,8 +72,6 @@
   color: $white;
 
   z-index: 1;
-
-  //outline: 1px solid green;
 }
 
 .products__text {
@@ -129,6 +122,13 @@
     min-height: 256px;
     margin-right: 0;
     margin-bottom: 45px;
+
+    &--components {
+      & .products__text {
+        padding-top: 53px;
+        padding-left: 46px;
+      }
+    }
   }
 
   .products__text {
@@ -142,7 +142,7 @@
 
 @media(max-width: $tablet-width) {
   .products__wrapper {
-    padding: 51px 15px 0;
+    padding: 51px 15px 37px;
   }
   .products__description {
     font-size: 28px;
@@ -163,6 +163,13 @@
     min-height: 256px;
     margin-right: 0;
     margin-bottom: 30px;
+
+    &--components {
+      & .products__text {
+        padding-top: 31px;
+        padding-left: 38px;
+      }
+    }
   }
 
 

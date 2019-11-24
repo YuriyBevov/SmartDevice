@@ -1,0 +1,258 @@
+.question {
+  position: relative;
+  min-height: 670px;
+  background-color: $blue;
+}
+
+.question__wrapper {
+  @include container();
+
+  display: flex;
+  position: relative;
+  padding: 91px 120px 110px;
+  width: 100%;
+
+  &:before {
+    position: absolute;
+    top: 94px;
+    left: -47px
+    ;
+    width: 665px;
+    height: 487px;
+    content: "";
+    background-image: url('../img/question1x.jpg');
+    background-size: cover;
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/question2x.jpg");
+    }
+  }
+}
+
+.question__form-box {
+  position: relative;
+  width: 100%;
+  padding-left: 51.9%;
+}
+
+.question__title {
+  @include font($font: $title, $size: 36px, $height: 51px);
+
+  margin: 0;
+  margin-left: -3px;
+  margin-bottom: 10px;
+  color: $white;
+  max-width: 545px;
+}
+
+.question__description {
+  @include font($font: $text, $size: 16px, $height: 22px);
+
+  margin: 0;
+  margin-bottom: 50px;
+  padding-left: 1px;
+  color: $white;
+}
+
+.question__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.question__form-btns {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.question__submit {
+  @include font($font: $bold, $size: 14px, $height: 16px);
+
+  max-width: 47.5%;
+  min-height: 45px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid $white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 30px;
+  background-color: transparent;
+  color: $white;
+  order: 1;
+  flex-grow: 1;
+}
+
+.question__input {
+  border: none;
+  max-width: 47.5%;
+  min-height: 50px;
+  flex-grow: 1;
+  padding-left: 17px;
+  margin-bottom: 43px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.question__input::placeholder {
+  @include font($font: $text, $size: 16px, $height: 22px);
+
+  color: $white;
+}
+
+.question__text {
+  @include font($font: $text, $size: 16px, $height: 22px);
+
+  width: 100%;
+  min-height: 155px;
+  padding-top: 12px;
+  padding-left: 17px;
+  margin-bottom: 41px;
+  border: none;
+  resize: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $white;
+}
+
+.question__accept {
+  display: none;
+}
+
+.question__accept:checked + .question__checkbox:before  {
+  background-image: url("../img/accept.svg");
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.question__checkbox {
+  @include font($font: $text, $size: 14px, $height: 16px);
+
+  max-width: 45.5%;
+  position: relative;
+  opacity: 0.8;
+  padding-left: 31px;
+  margin-top: 8px;
+  cursor: pointer;
+  color: $white;
+
+  order: 2;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    content: "";
+    border: 1px solid #FFFFFF;
+  }
+}
+
+@media(max-width: $desktop-width) {
+  .question {
+    min-height: 664px;
+  }
+
+  .question__wrapper {
+    width: 76.733766%;
+    padding: 0;
+    padding-top: 80px;
+
+    &:before {
+      background-image: none;
+    }
+  }
+
+  .question__form-box {
+    padding-left: 2px;
+  }
+
+  .question__title {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 16px;
+    margin-left: -4px;
+  }
+
+  .question__description {
+    margin-bottom: 52px;
+  }
+
+  .question__input {
+    margin-bottom: 45px;
+  }
+
+  .question__text {
+    margin-bottom: 49px;
+  }
+
+  .question__checkbox {
+    padding-left: 32px;
+    margin-top: 9px;
+
+    &:before {
+      .question__checkbox:before {
+        top: 1px;
+        left: -2px;
+        width: 17px;
+      }
+    }
+  }
+
+  .question__submit {
+    min-height: 46.65px;
+  }
+}
+
+@media(max-width: $tablet-width) {
+  .question {
+    min-height: 640px;
+  }
+  .question__wrapper {
+    min-width: 290px;
+    padding-top: 30px;
+  }
+  .question__title {
+    font-size: 28px;
+    line-height: 39px;
+    margin-left: -2px;
+    margin-bottom: 13px;
+  }
+
+  .question__description {
+    padding-left: 0;
+    margin-left: -2px;
+    margin-bottom: 24px;
+  }
+
+  .question__form {
+    flex-direction: column;
+  }
+
+  .question__input {
+    max-width: 100%;
+    padding-left: 15px;
+    margin-bottom: 32px;
+  }
+
+  .question__text {
+    min-height: 104px;
+    padding-top: 14px;
+    padding-left: 15px;
+    margin-bottom: 32px;
+  }
+
+  .question__submit {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 22px;
+  }
+
+  .question__checkbox {
+    max-width: 100%;
+  }
+}
