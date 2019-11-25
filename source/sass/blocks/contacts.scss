@@ -35,6 +35,10 @@
   display: none;
 }
 
+.contacts__content.closed {
+  display: block;
+}
+
 @media(max-width: $desktop-width) {
   .contacts__text {
     padding-left: 2px;
@@ -59,23 +63,48 @@
   .contacts__content {
     display: flex;
     flex-direction: column;
+    padding-top: 32px;
   }
 
   .contacts__text {
     width: 290px;
-    margin-bottom: 32px;
     padding-left: 0;
+    margin: 0;
   }
 
   .contacts__btn {
     display: block;
     position: absolute;
-    top: 17px;
-    right: 0;
     cursor: pointer;
+    border: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    &--hide {
+      top: 10px;
+      right: 8px;
+      background-image: url("../img/minus.svg");
+      background-size: 16px 2px;
+      background-position: 50% 50%;
+    }
+
+    &--show {
+      top: 10px;
+      right: 8px;
+      background-image: url("../img/plus.svg");
+      background-size: 16px 16px;
+      background-position: 50% 50%;
+    }
   }
 
   .contacts__address {
     width: 280px;
+  }
+
+  .contacts__content.closed {
+    display: none;
   }
 }

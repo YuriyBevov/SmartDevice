@@ -54,3 +54,49 @@ closeBtn.addEventListener("click", onCloseBtnEvent);
 openBtn.addEventListener("click", onBtnClickEvent);
 
 })();
+
+// показ/скрытие меню в футере
+
+(function () {
+
+  var nojs = document.querySelectorAll(".nojs");
+
+  for (var i = 0; i < nojs.length; i++) {
+    nojs[i].classList.remove("nojs");
+    nojs[i].classList.add("closed");
+  }
+
+  var toggleBtn = document.querySelectorAll(".toggleBtn");
+
+  var onToggleClickEvent = function () {
+    var _this = this;
+    var node = _this.parentNode.nextSibling;
+    if(_this.classList.contains("contacts__btn")) {
+      if(_this.classList.contains("contacts__btn--hide")) {
+        _this.classList.remove("contacts__btn--hide");
+        _this.classList.add("contacts__btn--show");
+        node.nextSibling.classList.remove("closed");
+      } else {
+        _this.classList.remove("contacts__btn--show");
+        _this.classList.add("contacts__btn--hide");
+        node.nextSibling.classList.add("closed");
+      }
+    } else {
+      if(_this.classList.contains("sections__btn--hide")) {
+        _this.classList.remove("sections__btn--hide");
+        _this.classList.add("sections__btn--show");
+        node.nextSibling.classList.remove("closed");
+      } else {
+        _this.classList.remove("sections__btn--show");
+        _this.classList.add("sections__btn--hide");
+        node.nextSibling.classList.add("closed");
+      }
+    }
+  }
+
+  for(var i = 0; i < toggleBtn.length; i++) {
+    toggleBtn[i].addEventListener("click", onToggleClickEvent);
+  }
+
+
+})();
