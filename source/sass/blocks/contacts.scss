@@ -36,7 +36,8 @@
 }
 
 .contacts__content.closed {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 @media(max-width: $desktop-width) {
@@ -49,6 +50,7 @@
   .contacts {
     border-top: 1px solid rgba(98, 105, 98, 0.2);
   }
+
   .contacts__wrapper {
     padding-top: 11px;
     padding-left: 15px;

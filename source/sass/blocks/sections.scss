@@ -49,7 +49,7 @@
 }
 
 .sections__list.closed {
-  display: block;
+  display: flex;
 }
 
 @media(max-width: $desktop-width) {
