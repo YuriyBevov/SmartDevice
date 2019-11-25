@@ -2,38 +2,31 @@
   position: relative;
   min-height: 670px;
   background-color: $blue;
+  background-image: url("../img/bg-question.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+    background-image: url("../img/bg-question2x.jpg");
+  }
 }
 
 .question__wrapper {
   @include container();
 
   display: flex;
+  justify-content: flex-end;
   position: relative;
   padding: 91px 120px 110px;
   width: 100%;
-
-  &:before {
-    position: absolute;
-    top: 94px;
-    left: -47px
-    ;
-    width: 665px;
-    height: 487px;
-    content: "";
-    background-image: url('../img/question1x.jpg');
-    background-size: cover;
-
-    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
-      background-image: url("../img/question2x.jpg");
-    }
-  }
 }
 
 .question__form-box {
   position: relative;
-  width: 100%;
-  padding-left: 51.9%;
+  width: 50%;
+  padding-left: 22px;
 }
+
 
 .question__title {
   @include font($font: $title, $size: 36px, $height: 51px);
@@ -72,7 +65,7 @@
   @include font($font: $bold, $size: 14px, $height: 16px);
 
   max-width: 47.5%;
-  min-height: 45px;
+  height: 45px;
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -159,6 +152,7 @@
 @media(max-width: $desktop-width) {
   .question {
     min-height: 664px;
+    background: $blue;
   }
 
   .question__wrapper {
@@ -173,6 +167,7 @@
 
   .question__form-box {
     padding-left: 2px;
+    width: 100%;
   }
 
   .question__title {
@@ -237,6 +232,10 @@
     flex-direction: column;
   }
 
+  .question__form-btns {
+    flex-direction: column;
+  }
+
   .question__input {
     max-width: 100%;
     padding-left: 15px;
@@ -251,9 +250,11 @@
   }
 
   .question__submit {
-    max-width: 100%;
+    width: 100%;
     margin-right: 0;
     margin-bottom: 22px;
+    align-self: center;
+    max-width: 290px;
   }
 
   .question__checkbox {

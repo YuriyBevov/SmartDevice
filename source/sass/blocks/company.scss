@@ -11,7 +11,7 @@
     width: 150px;
     height: 317px;
     content: "";
-    background-image: url(../img/year1x.jpg);
+    background-image: url(../img/year.png);
     background-size: 220px 317px;
     background-repeat: no-repeat;
   }
@@ -71,6 +71,14 @@
   .company__wrapper {
     padding-left: 188px;
     padding-right: 0;
+
+    &:before {
+      top: 0px;
+      left: -33px;
+      width: 250px;
+      height: 360px;
+      background-size: 100%;
+    }
   }
 
   .company__title {

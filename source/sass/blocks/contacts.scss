@@ -1,8 +1,8 @@
 .contacts__wrapper {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   flex-direction: column;
-  max-width: 333px;
 }
 
 .contacts__text {
@@ -49,12 +49,6 @@
 @media(max-width: $tablet-width) {
   .contacts {
     border-top: 1px solid rgba(98, 105, 98, 0.2);
-  }
-
-  .contacts__wrapper {
-    padding-top: 11px;
-    padding-left: 15px;
-    margin: 0 auto;
   }
 
   .contacts__header {

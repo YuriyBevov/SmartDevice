@@ -1,12 +1,12 @@
 .header {
   position: relative;
     background-color: rgb(27, 45, 55);
-    background-image: url('../img/main1x.jpg');
+    background-image: url('../img/bg-header.jpg');
     background-size: cover;
-    background-position: 100%;
+    background-position: center;
 
     @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
-      background-image: url("../img/main2x.jpg");
+      background-image: url("../img/bg-header2x.jpg");
     }
 }
 
@@ -20,6 +20,14 @@
 }
 
 @media(max-width: $desktop-width) {
+  .header {
+    background-image: url('../img/bg-header-tablet.jpg');
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/bg-header-tablet2x.jpg");
+    }
+  }
+
   .header__wrapper {
     min-height: 691px;
     padding-top: 7px;
@@ -29,9 +37,15 @@
 }
 
 @media(max-width: $tablet-width) {
+  .header {
+    background-image: url('../img/bg-header-mobile.jpg');
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/bg-heabg-header-mobile2x.jpg");
+    }
+  }
+
   .header__wrapper {
     min-height: 652px;
-  //  padding-top: 7px;
-  //  padding-left: 14px;
   }
 }
