@@ -41,7 +41,7 @@
   margin-bottom: 21px;
   color: $primary-grey;
 
-  &--ellipsis {
+  &-ellipsis {
     display: none;
   }
 
@@ -83,11 +83,11 @@
   .company__description {
     margin-bottom: 19px;
 
-    &--more {
+    &-more {
       display: none;
     }
 
-    &--ellipsis {
+    &-ellipsis {
       display: inline-block;
     }
 
