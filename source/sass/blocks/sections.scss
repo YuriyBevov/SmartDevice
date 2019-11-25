@@ -6,7 +6,6 @@
 .sections__wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
   max-width: 470px;
 }
 
@@ -45,6 +44,10 @@
   color: $light-black;
 }
 
+.sections__btn {
+  display: none;
+}
+
 @media(max-width: $desktop-width) {
   .sections__text {
     padding-left: 2px;
@@ -66,21 +69,20 @@
     margin: 0 auto;
   }
 
-  .sections__text {
+  .sections__header {
+    display: flex;
     position: relative;
-    width: 290px;
+  }
 
-    &:after {
-      position: absolute;
-      top: 17px;
-      right: 0;
-      width: 16px;
-      height: 16px;
-      content: "";
-      cursor: pointer;
-      background-image: url("../img/plus.svg");
-      background-size: 16px 16px;
-      background-repeat: no-repeat;
-    }
+  .sections__text {
+    width: 290px;
+  }
+
+  .sections__btn {
+    display: block;
+    position: absolute;
+    top: 17px;
+    right: 0;
+    cursor: pointer;
   }
 }

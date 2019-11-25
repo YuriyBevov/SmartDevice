@@ -68,15 +68,18 @@
 .nav__btn {
   @include font($font: $bold, $size: 14px, $height: 16px);
 
+  display: block;
   width: 180px;
   min-height: 45px;
   padding: 0;
+  padding-top: 13px;
   border: 1px solid $white;
   border-radius: 5px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
+  text-decoration: none;
   background-color: transparent;
   color: $white;
 }
