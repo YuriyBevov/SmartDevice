@@ -146,14 +146,14 @@
         <div class="question__form-box">
           <h2 class="question__title">Остались вопросы? Задайте их нам!</h2>
           <p class="question__description">Мы проконсультируем Вас бесплатно</p>
-          <form action="#" class="question__form">
+          <form action="#" method="POST" class="question__form">
             <input type="text" class="question__input question__name" placeholder="Имя">
             <input type="text" class="question__input question__phone" placeholder="Телефон">
-            <textarea class="question__text">Ваш вопрос</textarea>
+            <textarea class="question__text" placeholder="Ваш вопрос"></textarea>
             <div class="question__form-btns">
               <input type="checkbox" id="question__checkbox" class="question__accept">
               <label for="question__checkbox" class="question__checkbox" checked>Я согласен на обработку персональных данных</label>
-              <button type="submit" class="question__submit">Задать вопрос</button>
+              <input type="submit" class="question__submit" value="Задать вопрос">
             </div>
           </form>
         </div>
@@ -267,14 +267,14 @@
         </svg>
       </div>
       <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <form action="#" class="modal__form">
-        <input type="text" class="modal__input modal__name" placeholder="Имя">
-        <input type="text" class="modal__input modal__phone" placeholder="Телефон">
-        <textarea class="modal__text">Ваш вопрос</textarea>
+      <form action="#" method="POST" class="modal__form">
+        <input type="text" class="modal__input modal__name" placeholder="Имя" value="">
+        <input type="text" class="modal__input modal__phone" placeholder="Телефон" value="">
+        <textarea class="modal__text" placeholder="Ваш вопрос" value=""></textarea>
         <div class="modal__form-btns">
           <input type="checkbox" id="modal__checkbox" class="modal__accept">
           <label for="modal__checkbox" class="modal__checkbox" checked>Я согласен на обработку персональных данных</label>
-          <button type="submit" class="modal__submit">Отправить</button>
+          <input type="submit" class="modal__submit" value="отправить">
         </div>
       </form>
     </div>

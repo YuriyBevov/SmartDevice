@@ -25,9 +25,14 @@ var modalContent = document.querySelector(".modal__wrapper");
 var openBtn = document.querySelector(".nav__btn");
 var closeBtn = document.querySelector(".modal__closeBtn");
 
+var setFocus = function () {
+  document.querySelector(".modal__name").focus();
+};
+
 var onBtnClickEvent = function (evt) {
   evt.preventDefault();
   modal.classList.remove("modal--closed");
+  setFocus();
   document.addEventListener("keydown", onPressEsc);
   modal.addEventListener("click", onOverlayClickEvent);
 };
@@ -97,6 +102,24 @@ openBtn.addEventListener("click", onBtnClickEvent);
   for(var i = 0; i < toggleBtn.length; i++) {
     toggleBtn[i].addEventListener("click", onToggleClickEvent);
   }
+})();
 
+// сохранение значений в localStorage
 
+(function () {
+  var name = document.querySelector(".modal__name");
+  var phone = document.querySelector(".modal__phone");
+  var text = document.querySelector(".modal__text");
+  var submit = document.querySelector(".modal__submit");
+
+  var onSubmitClickHandler = function () {
+    if (name.value != "") {
+      localStorage.setItem("name", name.value);
+    } if (phone.value != "") {
+      localStorage.setItem("phone", phone.value)
+    } if (text.value != "") {
+      localStorage.setItem("text",text.value)
+    }
+  }
+  submit.addEventListener("click", onSubmitClickHandler);
 })();
