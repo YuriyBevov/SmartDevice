@@ -18,46 +18,67 @@ headerToggle.addEventListener('click', function () {
 
 (function () {
 
-var ESC_KEYCODE = 27;
+  var ESC_KEYCODE = 27;
 
-var modal = document.querySelector(".modal");
-var modalContent = document.querySelector(".modal__wrapper");
-var openBtn = document.querySelector(".nav__btn");
-var closeBtn = document.querySelector(".modal__closeBtn");
+  var modal = document.querySelector(".modal");
+  var modalContent = document.querySelector(".modal__wrapper");
+  var openBtn = document.querySelector(".nav__btn");
+  var closeBtn = document.querySelector(".modal__closeBtn");
 
-var setFocus = function () {
-  document.querySelector(".modal__name").focus();
-};
+  var name = document.querySelector(".modal__name");
+  var phone = document.querySelector(".modal__phone");
+  var text = document.querySelector(".modal__text");
 
-var onBtnClickEvent = function (evt) {
-  evt.preventDefault();
-  modal.classList.remove("modal--closed");
-  setFocus();
-  document.addEventListener("keydown", onPressEsc);
-  modal.addEventListener("click", onOverlayClickEvent);
-};
+  var setFocus = function () {
+    document.querySelector(".modal__name").focus();
+  };
 
-var onCloseBtnEvent = function () {
-  modal.classList.add("modal--closed");
-}
+  var onBtnClickEvent = function (evt) {
+    evt.preventDefault();
+    modal.classList.remove("modal--closed");
+    setFocus();
+    document.addEventListener("keydown", onPressEsc);
+    modal.addEventListener("click", onOverlayClickEvent);
+    name.value = localStorage.getItem("name");
+    phone.value = localStorage.getItem("phone");
+    text.value = localStorage.getItem("text");
+  };
 
-var onPressEsc = function (evt) {
-  if (evt.keyCode === ESC_KEYCODE) {
-    onCloseBtnEvent();
-    document.removeEventListener('keydown', onPressEsc);
-  }
-};
-
-var onOverlayClickEvent = function (evt) {
-  if(evt.target === modal) {
+  var onCloseBtnEvent = function () {
     modal.classList.add("modal--closed");
-    modal.removeEventListener("click", onOverlayClickEvent);
   }
-};
 
-closeBtn.addEventListener("click", onCloseBtnEvent);
-openBtn.addEventListener("click", onBtnClickEvent);
+  var onPressEsc = function (evt) {
+    if (evt.keyCode === ESC_KEYCODE) {
+      onCloseBtnEvent();
+      document.removeEventListener('keydown', onPressEsc);
+    }
+  };
 
+  var onOverlayClickEvent = function (evt) {
+    if(evt.target === modal) {
+      modal.classList.add("modal--closed");
+      modal.removeEventListener("click", onOverlayClickEvent);
+    }
+  };
+
+  closeBtn.addEventListener("click", onCloseBtnEvent);
+  openBtn.addEventListener("click", onBtnClickEvent);
+
+  // сохранение в localStorage
+
+  var submit = document.querySelector(".modal__submit");
+
+  var onSubmitClickHandler = function () {
+    if (name.value != "") {
+      localStorage.setItem("name", name.value);
+    } if (phone.value != "") {
+      localStorage.setItem("phone", phone.value)
+    } if (text.value != "") {
+      localStorage.setItem("text",text.value)
+    }
+  }
+  submit.addEventListener("click", onSubmitClickHandler);
 })();
 
 // показ/скрытие меню в футере
@@ -102,24 +123,4 @@ openBtn.addEventListener("click", onBtnClickEvent);
   for(var i = 0; i < toggleBtn.length; i++) {
     toggleBtn[i].addEventListener("click", onToggleClickEvent);
   }
-})();
-
-// сохранение значений в localStorage
-
-(function () {
-  var name = document.querySelector(".modal__name");
-  var phone = document.querySelector(".modal__phone");
-  var text = document.querySelector(".modal__text");
-  var submit = document.querySelector(".modal__submit");
-
-  var onSubmitClickHandler = function () {
-    if (name.value != "") {
-      localStorage.setItem("name", name.value);
-    } if (phone.value != "") {
-      localStorage.setItem("phone", phone.value)
-    } if (text.value != "") {
-      localStorage.setItem("text",text.value)
-    }
-  }
-  submit.addEventListener("click", onSubmitClickHandler);
 })();
