@@ -1,4 +1,4 @@
-.nav {
+/*.nav {
   display: flex;
   justify-content: space-between;
 }
@@ -130,21 +130,137 @@
   }
 
   .nav__list {
+    width: 50%;
     padding-top: 20px;
   }
 
   .nav__item {
     &--mail {
+
+      margin-right: 0;
+
       &:before{
         top: 0;
-        left: -30px;
+        //left: -30px;
       }
     }
     &--phone {
       &:before{
-        top: -5px;
-        left: 19px;
+        //top: -5px;
+        //left: 19px;
+        top: -3px;
+        left: 79px;
       }
+    }
+  }
+}*/
+
+.nav {
+  outline: 1px solid red;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__items {
+  outline: 1px solid green;
+
+  display: flex;
+  width: 70%;
+  padding-top: 18px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav__link {
+  @include font($font: $text, $size: 16px, $height: 18px);
+
+  display: flex;
+  align-items: center;
+  margin-right: 48px;
+  text-decoration: none;
+
+  color: $white;
+
+  &--mail {
+    margin-right: 89px;
+  }
+}
+
+.nav__link-description {
+  padding-left: 16px;
+  margin: 0;
+
+  &--mail {
+    padding-left: 20px;
+  }
+}
+
+.nav__btn {
+  @include font($font: $bold, $size: 14px, $height: 16px);
+
+  display: block;
+  width: 180px;
+  min-height: 45px;
+  padding: 0;
+  padding-top: 13px;
+  border: 1px solid $white;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  color: $white;
+}
+
+@media(max-width: $desktop-width) {
+  .nav__items {
+    padding-top: 28px;
+    align-items: flex-start;
+  }
+  
+  .nav__link {
+    margin-right: 17px;
+
+    &--mail {
+      margin-right: 33px;
+    }
+  }
+
+  .nav__link-svg {
+
+    &--mail {
+      width: 25.33px;
+      height: 18.67px;
+      margin-top: 3px;
+    }
+
+    &--phone {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .nav__btn {
+    display: none;
+  }
+
+  .nav__link-description {
+    display: none;
+  }
+}
+@media(max-width: $tablet-width) {
+  .nav__items {
+    padding-top: 16px;
+  }
+
+  .nav__link {
+    margin-right: 8px;
+
+    &--mail {
+      margin-right: 24px;
     }
   }
 }
