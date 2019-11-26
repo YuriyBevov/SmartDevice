@@ -1,58 +1,81 @@
 .footer__wrapper {
   @include container();
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 48px 0 58px;
-  background-color: $white;
+
+  padding-top: 47px;
+  padding-bottom: 59px;
 }
 
 .footer__top-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-grow: 1;
+  width: 30.5%;
 }
 
 .footer__middle-content {
+  width: 69.5%;
+
   display: flex;
-
-  width: 69.55%;
 }
 
-@media (max-width: $desktop-width) {
-  .footer__wrapper {
-    padding-top: 2px;
-    padding-bottom: 36px;
-  }
+.footer__company {
+  display: none;
+}
 
-  .footer__top-content {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+@media(max-width: $desktop-width) {
+  .footer__company {
+    @include font($font: $text, $size: 13px, $height: 24px);
+
+    display: flex;
     align-items: center;
-    padding: 0 27px 24px 14px;
+    width: 39.7%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 20px;
+    color: $light-black;
+
+    opacity: 0.5;
   }
 
-  .footer__middle-content {
-    border-top: 1px solid rgba(98, 105, 98, 0.2);
-    padding: 21px 38px 0 25px;
-    flex-grow: 1;
-  }
-}
-
-@media (max-width: $tablet-width) {
   .footer__wrapper {
-    padding-bottom: 26px;
-  }
-
-  .footer__top-content {
-    flex-direction: column;
-    padding: 32px 0 49px 20px;
-  }
-
-  .footer__middle-content {
     flex-direction: column;
     padding: 0;
+  }
+
+  .footer__top-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2px 14px 23px;
+  }
+
+  .footer__middle-content {
+    width: 100%;
+    padding: 21px 25px 35px;
+    border-top: 1px solid rgba(98, 105, 98, 0.2);
+  }
+}
+
+@media(max-width: $tablet-width) {
+  .footer__top-content {
+    flex-direction: column;
+    padding-top: 27px;
+    padding-bottom: 49px;
+  }
+
+  .footer__company {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .footer__middle-content {
+    padding: 0;
+    flex-direction: column;
   }
 }

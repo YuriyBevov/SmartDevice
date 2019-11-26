@@ -1,5 +1,4 @@
 .logo {
-  outline: 1px solid black;
   width: 30%;
 }
 
@@ -47,21 +46,31 @@
   padding-left: 78px;
 }
 
-@media(max-width: $tablet-width) {
-  .logo {
-    width: 50%;
+.logo-footer {
+  width: 100%
+}
+
+@media(max-width: $desktop-width) {
+  .logo__title {
+    display: block;
+    margin-bottom: 2px;
   }
+  .logo-footer {
+    width: 42.3%;
+  }
+}
 
-  .logo__wrapper {
-    width: 50%;
-
-    &:before {
-    top: 12px;
-    left: 5px;
+@media(max-width: $tablet-width) {
+  .logo__wrapper:before {
     width: 38px;
     height: 38px;
     background-size: 38px 38px;
-    }
+  }
+
+  .logo__wrapper--footer:before {
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
   }
 
   .logo__title,
@@ -69,22 +78,15 @@
     display: none;
   }
 
-  .logo__wrapper--footer {
-    padding-left: 74px;
-    padding-top: 18px;
-    margin-bottom: 67px;
+  .logo__title--footer,
+  .logo__description--footer {
+    display: block;
+  }
 
-    & .logo__title,
-    & .logo__description {
-      display: block;
-    }
-
-    &:before {
-    top: 12px;
-    left: 5px;
-    width: 52px;
-    height: 52px;
-    background-size: 52px 52px;
-    }
+  .logo-footer {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin-bottom: 25px;
   }
 }

@@ -1,8 +1,10 @@
+.contacts{
+  width: 33.8%;
+}
+
 .contacts__wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
 }
 
 .contacts__text {
@@ -12,8 +14,15 @@
   text-transform: uppercase;
   margin: 0;
   padding-top: 17px;
+  padding-left: 5px;
   margin-bottom: 25px;
   color: $light-black;
+}
+
+.contacts__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .contacts__address {
@@ -41,19 +50,33 @@
 }
 
 @media(max-width: $desktop-width) {
+  .contacts{
+    width: 50%;
+  }
+
   .contacts__text {
     padding-left: 2px;
+  }
+
+  .contacts__wrapper {
+    flex-direction: column;
+    padding-left: 15px;
   }
 }
 
 @media(max-width: $tablet-width) {
   .contacts {
+    width: 100%;
     border-top: 1px solid rgba(98, 105, 98, 0.2);
+  }
+
+  .contacts__wrapper {
+    padding: 29px 15px 26px;
   }
 
   .contacts__header {
     display: flex;
-    position: relative;
+    justify-content: space-between;
   }
 
   .contacts__content {
@@ -63,33 +86,28 @@
   }
 
   .contacts__text {
-    width: 290px;
     padding-left: 0;
     margin: 0;
+    padding: 0;
   }
 
   .contacts__btn {
     display: block;
-    position: absolute;
     cursor: pointer;
     border: none;
     padding: 0;
-    width: 30px;
-    height: 30px;
+    width: 16px;
+    height: 16px;
     background-color: transparent;
     background-repeat: no-repeat;
 
     &--hide {
-      top: 10px;
-      right: 8px;
       background-image: url("../img/minus.svg");
       background-size: 16px 2px;
       background-position: 50% 50%;
     }
 
     &--show {
-      top: 10px;
-      right: 8px;
       background-image: url("../img/plus.svg");
       background-size: 16px 16px;
       background-position: 50% 50%;
@@ -104,3 +122,55 @@
     display: none;
   }
 }
+
+/*.contacts {
+  width: 33.8%;
+}
+
+.contacts__wrapper {
+
+}
+
+.contacts__header {
+
+}
+
+.contacts__text {
+  @include font($font: $title, $size: 15px, $height: 16px);
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: 17px;
+  margin-bottom: 25px;
+  color: $light-black;
+}
+
+
+.contacts__content {
+
+}
+
+.contacts__address {
+  @include font($font: $text, $size: 15px, $height: 25px);
+
+  font-style: normal;
+  opacity: 0.5;
+  color: $light-black;
+}
+
+.contacts__phone {
+  @include font($font: $text, $size: 15px, $height: 25px);
+  text-decoration: none;
+  opacity: 0.5;
+  color: $light-black;
+}
+
+.contacts__btn {
+  display: none;
+}
+
+.contacts__content.closed {
+  display: flex;
+  flex-direction: column;
+}*/

@@ -18,14 +18,20 @@
 
 @media(max-width: $desktop-width) {
   .social__list {
+    padding: 0;
+    align-items: center;
     padding-top: 18px;
   }
+
+  .social{
+    width: 18%;
+    display: flex;
+    justify-content: center;
+  }
 }
+
 @media(max-width: $tablet-width) {
   .social {
-    margin-left: -24px;
-  }
-  .social__list {
-    padding-left: 0;
+    width: 100%;
   }
 }

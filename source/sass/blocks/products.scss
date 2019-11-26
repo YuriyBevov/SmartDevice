@@ -101,7 +101,7 @@
     background-image: url("../img/arrow-right.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    transform: translate(-3%, -52%);
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -170,17 +170,17 @@
 
 @media(max-width: $tablet-width) {
   .products__wrapper {
-    padding: 51px 15px 37px;
+    padding: 50px 15px 35px;
   }
   .products__description {
     font-size: 28px;
-    padding-left: 12px;
-    margin-bottom: 40px;
+    padding-left: 10px;
+    margin-bottom: 42px;
   }
 
   .products__text {
     padding-top: 20px;
-    padding-left: 38px;
+    padding-left: 35px;
 
     &--components {
       padding-top: 30px;
@@ -194,8 +194,8 @@
 
     &--components {
       & .products__text {
-        padding-top: 31px;
-        padding-left: 38px;
+        padding-top: 30px;
+        padding-left: 35px;
       }
     }
   }
@@ -226,5 +226,4 @@
       }
     }
   }
-
 }
