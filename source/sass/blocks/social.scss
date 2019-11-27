@@ -17,11 +17,9 @@
 }
 
 .social__link {
-
-
   & svg {
-     fill: $social;
-     transition: fill 0.3s;
+    fill: $social;
+    transition: fill 0.3s;
   }
 
   &:hover svg,
@@ -30,25 +28,25 @@
   }
 
   &:active svg {
-    opacity: 0.5
+    opacity: 0.5;
   }
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .social__list {
     padding: 0;
     align-items: center;
     padding-top: 18px;
   }
 
-  .social{
+  .social {
     width: 18%;
     display: flex;
     justify-content: center;
   }
 }
 
-@media(max-width: $tablet-width) {
+@media (max-width: $tablet-width) {
   .social {
     width: 100%;
   }

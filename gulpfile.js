@@ -16,8 +16,6 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 
-//var jsmin = require("gulp-uglify");
-
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -36,8 +34,6 @@ gulp.task("css", function () {
 gulp.task("js", function(){
   return gulp.src("source/js/**.js")
   .pipe(plumber())
-  //.pipe(jsmin())
-  //.pipe(rename("script.min.js"))
   .pipe(gulp.dest("build/js"));
 });
 

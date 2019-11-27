@@ -23,7 +23,7 @@
   display: none;
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .footer__company {
     @include font($font: $text, $size: 13px, $height: 24px);
 
@@ -59,7 +59,7 @@
   }
 }
 
-@media(max-width: $tablet-width) {
+@media (max-width: $tablet-width) {
   .footer__top-content {
     flex-direction: column;
     padding-top: 27px;

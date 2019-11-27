@@ -7,7 +7,7 @@
   padding-top: 23px;
   padding-left: 80px;
 
-  &:before {
+  &::before {
     position: absolute;
     top: 17px;
     left: 11px;
@@ -23,13 +23,13 @@
 .logo__title {
   @include font($font: $bold, $size: 25px, $height: 29px);
 
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   color: $white;
 
   &--footer {
-      color:$logo-footer;
-      display: block;
-      margin-bottom: 1px;
+    color: $logo-footer;
+    display: block;
+    margin-bottom: 1px;
   }
 }
 
@@ -47,27 +47,28 @@
 }
 
 .logo-footer {
-  width: 100%
+  width: 100%;
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .logo__title {
     display: block;
     margin-bottom: 2px;
   }
+
   .logo-footer {
     width: 42.3%;
   }
 }
 
-@media(max-width: $tablet-width) {
-  .logo__wrapper:before {
+@media (max-width: $tablet-width) {
+  .logo__wrapper::before {
     width: 38px;
     height: 38px;
     background-size: 38px 38px;
   }
 
-  .logo__wrapper--footer:before {
+  .logo__wrapper--footer::before {
     width: 52px;
     height: 52px;
     background-size: 52px 52px;

@@ -1,13 +1,13 @@
 .header {
   position: relative;
-    background-color: rgb(27, 45, 55);
-    background-image: url('../img/bg-header.jpg');
-    background-size: cover;
-    background-position: center;
+  background-color: rgb(27, 45, 55);
+  background-image: url("../img/bg-header.jpg");
+  background-size: cover;
+  background-position: center;
 
-    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
-      background-image: url("../img/bg-header2x.jpg");
-    }
+  @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+    background-image: url("../img/bg-header2x.jpg");
+  }
 }
 
 .header__wrapper {
@@ -19,9 +19,9 @@
   padding-top: 20px;
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .header {
-    background-image: url('../img/bg-header-tablet.jpg');
+    background-image: url("../img/bg-header-tablet.jpg");
 
     @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
       background-image: url("../img/bg-header-tablet2x.jpg");
@@ -36,9 +36,9 @@
   }
 }
 
-@media(max-width: $tablet-width) {
+@media (max-width: $tablet-width) {
   .header {
-    background-image: url('../img/bg-header-mobile.jpg');
+    background-image: url("../img/bg-header-mobile.jpg");
 
     @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
       background-image: url("../img/bg-heabg-header-mobile2x.jpg");

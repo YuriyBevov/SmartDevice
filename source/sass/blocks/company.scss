@@ -4,21 +4,21 @@
   padding-right: 15px;
 
 
-  &:before {
+  &::before {
     position: absolute;
     top: 4px;
     left: -30px;
     width: 150px;
     height: 317px;
     content: "";
-    background-image: url(../img/year.png);
+    background-image: url("../img/year.png");
     background-size: 220px 317px;
     background-repeat: no-repeat;
   }
 }
 
 @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
-  .company__wrapper:before {
+  .company__wrapper::before {
     background-image: url("../img/year2x.jpg");
     background-size: cover;
   }
@@ -55,7 +55,6 @@
 
   width: 180px;
   min-height: 45px;
-  border: none;
   padding: 0;
   margin-left: 2px;
   border: 1px solid $blue;
@@ -79,13 +78,13 @@
   }
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .company__wrapper {
     padding-left: 188px;
     padding-right: 0;
 
-    &:before {
-      top: 0px;
+    &::before {
+      top: 0;
       left: -33px;
       width: 250px;
       height: 360px;
@@ -120,11 +119,12 @@
     margin-left: 0;
   }
 }
-@media(max-width: $tablet-width) {
+
+@media (max-width: $tablet-width) {
   .company__wrapper {
     padding-left: 2px;
 
-    &:before {
+    &::before {
       display: none;
     }
   }

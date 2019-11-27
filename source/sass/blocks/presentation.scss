@@ -28,7 +28,7 @@
   position: relative;
   width: 48.8%;
   min-height: 299px;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
   border-left: 3px solid $blue;
   margin-bottom: 30px;
   padding: 39px 10px 65px 42px;
@@ -76,7 +76,7 @@
       color: $white;
     }
 
-    & svg{
+    & svg {
       fill: $white;
     }
   }
@@ -99,7 +99,7 @@
   padding-right: 35px;
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .presentation {
     background-image: url("../img/bg-presentation-tablet.jpg");
 
@@ -175,7 +175,7 @@
   }
 }
 
-@media(max-width: $tablet-width) {
+@media (max-width: $tablet-width) {
   .presentation {
     background-image: url("../img/bg-presentation-mobile.jpg");
 

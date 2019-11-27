@@ -23,7 +23,8 @@
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0;}
+  padding: 0;
+}
 
 .products__item {
   position: relative;
@@ -65,7 +66,7 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0px 0px 5px $blue;
+    box-shadow: 0 0 5px $blue;
   }
 
   &:active {
@@ -82,8 +83,6 @@
   color: $white;
 
   z-index: 1;
-
-
 }
 
 .products__text {
@@ -103,7 +102,7 @@
   height: 63px;
   background-color: $blue;
 
-  &:after {
+  &::after {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -117,7 +116,7 @@
   }
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .products__wrapper {
     padding: 51px 25px 33px;
   }
@@ -134,24 +133,6 @@
     min-height: 256px;
     margin-right: 0;
     margin-bottom: 45px;
-
-    &--components {
-      & .products__text {
-        padding-top: 53px;
-        padding-left: 46px;
-      }
-    }
-  }
-
-  .products__text {
-    padding-top: 40px;
-
-    &--components {
-      padding-top: 50px;
-    }
-  }
-
-  .products__item {
 
     &--production {
       background-image: url("../img/production-tablet1x.jpg");
@@ -170,6 +151,11 @@
     }
 
     &--components {
+      & .products__text {
+        padding-top: 53px;
+        padding-left: 46px;
+      }
+
       background-image: url("../img/components-tablet1x.jpg");
 
       @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
@@ -178,12 +164,20 @@
     }
   }
 
+  .products__text {
+    padding-top: 40px;
+
+    &--components {
+      padding-top: 50px;
+    }
+  }
 }
 
-@media(max-width: $tablet-width) {
+@media (max-width: $tablet-width) {
   .products__wrapper {
     padding: 50px 15px 35px;
   }
+
   .products__description {
     font-size: 28px;
     padding-left: 10px;
@@ -203,16 +197,6 @@
     min-height: 256px;
     margin-right: 0;
     margin-bottom: 30px;
-
-    &--components {
-      & .products__text {
-        padding-top: 30px;
-        padding-left: 35px;
-      }
-    }
-  }
-
-  .products__item {
 
     &--production {
       background-image: url("../img/production-mobile1x.jpg");
@@ -235,6 +219,11 @@
 
       @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
         background-image: url("../img/components-mobile2x.jpg");
+      }
+
+      & .products__text {
+        padding-top: 30px;
+        padding-left: 35px;
       }
     }
   }

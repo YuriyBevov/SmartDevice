@@ -76,7 +76,7 @@
   }
 }
 
-@media(max-width: $desktop-width) {
+@media (max-width: $desktop-width) {
   .nav__items {
     padding-top: 30px;
     align-items: flex-start;
@@ -91,7 +91,6 @@
   }
 
   .nav__link-svg {
-
     &--mail {
       width: 25.33px;
       height: 18.67px;
@@ -112,7 +111,8 @@
     display: none;
   }
 }
-@media(max-width: $tablet-width) {
+
+@media (max-width: $tablet-width) {
   .nav__items {
     padding-top: 21px;
   }
