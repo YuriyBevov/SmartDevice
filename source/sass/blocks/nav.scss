@@ -24,6 +24,17 @@
   &--mail {
     margin-right: 89px;
   }
+
+  transition: color 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .nav__link-description {
@@ -52,6 +63,17 @@
   text-decoration: none;
   background-color: transparent;
   color: $white;
+  transition: color 0.3s, border 0.3s;
+
+  &:focus,
+  &:hover {
+    color: $blue;
+    border: 1px solid $blue;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 @media(max-width: $desktop-width) {

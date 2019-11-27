@@ -77,6 +77,17 @@
   flex-grow: 0;
   background-color: transparent;
   color: $white;
+  transition: color 0.3s, border 0.3s;
+
+  &:focus,
+  &:hover {
+    color: $blue;
+    background-color: $white;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .question__input {

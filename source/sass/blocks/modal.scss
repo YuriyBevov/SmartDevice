@@ -148,8 +148,20 @@
   border-radius: 5px;
   padding: 0;
   margin-bottom: 26px;
+  cursor: pointer;
   background-color: transparent;
   color: $white;
+  transition: color 0.3s, border 0.3s;
+
+  &:focus,
+  &:hover {
+    color: $blue;
+    background-color: $white;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 @media(min-width: $desktop-width) {

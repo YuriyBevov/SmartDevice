@@ -4,6 +4,18 @@
   text-decoration: none;
   opacity: 0.5;
   color: $light-black;
+
+  transition: color 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .sections__btn {

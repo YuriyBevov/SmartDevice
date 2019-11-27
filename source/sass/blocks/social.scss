@@ -16,6 +16,24 @@
   }
 }
 
+.social__link {
+
+
+  & svg {
+     fill: $social;
+     transition: fill 0.3s;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $blue;
+  }
+
+  &:active svg {
+    opacity: 0.5
+  }
+}
+
 @media(max-width: $desktop-width) {
   .social__list {
     padding: 0;

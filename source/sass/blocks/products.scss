@@ -61,6 +61,16 @@
     margin-right: 0;
   }
 
+  transition: box-shadow 0.3s;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 5px $blue;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .products__link {
@@ -72,6 +82,8 @@
   color: $white;
 
   z-index: 1;
+
+
 }
 
 .products__text {
