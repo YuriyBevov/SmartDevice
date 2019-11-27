@@ -191,9 +191,12 @@
           <h2 class="question__title">Остались вопросы? Задайте их нам!</h2>
           <p class="question__description">Мы проконсультируем Вас бесплатно</p>
           <form action="#" method="POST" class="question__form">
-            <input type="text" class="question__input question__name" placeholder="Имя">
-            <input type="text" class="question__input question__phone" placeholder="Телефон">
-            <textarea class="question__text" placeholder="Ваш вопрос"></textarea>
+            <label for="question__name" class="visually-hidden"></label>
+            <input type="text" class="question__input question__name" id="question__name" placeholder="Имя">
+            <label for="question__phone" class="visually-hidden"></label>
+            <input type="text" class="question__input question__phone" id="question__phone" placeholder="Телефон">
+            <label for="question__text" class="visually-hidden"></label>
+            <textarea class="question__text" id="question__text" placeholder="Ваш вопрос"></textarea>
             <div class="question__form-btns">
               <input type="checkbox" id="question__checkbox" class="question__accept">
               <label for="question__checkbox" class="question__checkbox">Я согласен на обработку персональных данных</label>
