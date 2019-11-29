@@ -19,7 +19,7 @@
 
 @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
   .company__wrapper::before {
-    background-image: url("../img/year2x.jpg");
+    background-image: url("../img/year2x.png");
     background-size: cover;
   }
 }
@@ -122,7 +122,7 @@
 
 @media (max-width: $tablet-width) {
   .company__wrapper {
-    padding-left: 2px;
+    padding-left: 3px;
 
     &::before {
       display: none;
@@ -139,7 +139,7 @@
     margin-bottom: 40px;
 
     &--partners {
-      margin-bottom: 30px;
+      margin-bottom: 29px;
     }
   }
 

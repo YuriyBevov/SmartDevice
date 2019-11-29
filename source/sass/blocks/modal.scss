@@ -39,6 +39,15 @@
   top: -10px;
   right: -20px;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .modal__title {
@@ -66,6 +75,8 @@
 }
 
 .modal__input {
+  @include font($font: $text, $size: 16px, $height: 22px);
+
   border: none;
   min-height: 51.83px;
   padding-left: 24px;
@@ -134,6 +145,15 @@
     height: 16px;
     content: "";
     border: 1px solid $white;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 

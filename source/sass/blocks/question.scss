@@ -5,6 +5,7 @@
   background-image: url("../img/bg-question.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
     background-image: url("../img/bg-question2x.jpg");
@@ -17,14 +18,13 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
-  padding: 91px 120px 110px;
+  padding: 91px 125px 110px;
   width: 100%;
 }
 
 .question__form-box {
   position: relative;
-  width: 50%;
-  padding-left: 22px;
+  width: 570px;
 }
 
 
@@ -91,6 +91,8 @@
 }
 
 .question__input {
+  @include font($font: $text, $size: 16px, $height: 22px);
+
   border: none;
   width: 47.5%;
   min-height: 50px;
@@ -161,6 +163,15 @@
     height: 16px;
     content: "";
     border: 1px solid $white;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
@@ -244,6 +255,10 @@
 
   .question__form {
     flex-direction: column;
+
+    &-box {
+      padding-left: 0;
+    }
   }
 
   .question__form-btns {
@@ -262,7 +277,7 @@
 
 
   .question__text {
-    min-height: 104px;
+    height: 104px;
     padding-top: 14px;
     padding-left: 15px;
     margin-bottom: 32px;
@@ -273,12 +288,11 @@
     margin-right: 0;
     margin-bottom: 29px;
     align-self: center;
-    max-width: 290px;
   }
 
   .question__checkbox {
     width: 100%;
-    max-width: 290px;
+    max-width: 100%;
     margin: 0 auto;
   }
 }

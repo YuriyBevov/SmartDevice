@@ -35,28 +35,40 @@
   }
 }
 
-.board__small {
+.board__link {
   @include font($font: $text, $size: 14px, $height: 16px);
 
+  text-decoration: none;
   position: absolute;
   bottom: -148px;
   left: -27px;
   opacity: 0.5;
   transform: rotate(-90deg);
   color: $white;
+  transition: color 0.3s;
+
+  &:focus,
+  &:hover {
+    color: $blue;
+  }
+
+  &:active {
+    opacity: 0.5s;
+  }
 }
 
 .board__btn {
   @include font($font: $bold, $size: 16px, $height: 19px);
 
+  display: block;
+  text-decoration: none;
   width: 407px;
   min-height: 55px;
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: 5px;
-  border: none;
-  padding: 0;
+  padding: 17px 15px;
   margin-left: 97px;
   cursor: pointer;
   background-color: $blue;
@@ -104,7 +116,7 @@
     }
   }
 
-  .board__small {
+  .board__link {
     display: none;
   }
 

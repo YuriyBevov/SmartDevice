@@ -3,7 +3,6 @@
   background-color: rgb(27, 45, 55);
   background-image: url("../img/bg-header.jpg");
   background-size: cover;
-  background-position: center;
 
   @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
     background-image: url("../img/bg-header2x.jpg");
@@ -12,11 +11,12 @@
 
 .header__wrapper {
   @include container();
+  max-width: 1480px;
   min-height: 885px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-top: 20px;
+  padding: 20px 35px 0 23px;
 }
 
 @media (max-width: $desktop-width) {
@@ -30,9 +30,7 @@
 
   .header__wrapper {
     min-height: 686px;
-    padding-top: 1px;
-    padding-left: 6px;
-    padding-right: 7px;
+    padding: 0 5px;
   }
 }
 
@@ -41,7 +39,7 @@
     background-image: url("../img/bg-header-mobile.jpg");
 
     @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
-      background-image: url("../img/bg-heabg-header-mobile2x.jpg");
+      background-image: url("../img/bg-header-mobile2x.jpg");
     }
   }
 

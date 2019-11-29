@@ -5,8 +5,9 @@
 
 .products__wrapper {
   @include container();
-  padding: 89px 0 125px;
-  padding-left: 134px;
+
+  padding: 89px 0 96px;
+  padding-left: 126px;
 }
 
 .products__description {
@@ -28,11 +29,12 @@
 
 .products__item {
   position: relative;
-  width: 28.7%;
+  width: 28.6%;
   min-height: 620px;
   background-size: cover;
   background-position: 50% 50%;
   margin-right: 30px;
+  margin-bottom: 30px;
 
   &--production {
     background-image: url("../img/production1x.jpg");

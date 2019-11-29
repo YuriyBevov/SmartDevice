@@ -94,12 +94,14 @@
   }
 
   .sections__wrapper {
-    padding: 29px 15px 26px;
+    padding: 0;
   }
 
   .sections__header {
     display: flex;
     justify-content: space-between;
+    padding: 29px 15px 26px;
+    cursor: pointer;
   }
 
   .sections__text {
@@ -116,14 +118,11 @@
     height: 16px;
     background-color: transparent;
     background-repeat: no-repeat;
+    background-image: url("../img/minus.svg");
+    background-size: 16px 2px;
+    background-position: 50% 50%;
 
-    &--hide {
-      background-image: url("../img/minus.svg");
-      background-size: 16px 2px;
-      background-position: 50% 50%;
-    }
-
-    &--show {
+    &.accordeon-btn--hide {
       background-image: url("../img/plus.svg");
       background-size: 16px 16px;
       background-position: 50% 50%;
@@ -131,10 +130,10 @@
   }
 
   .sections__list {
-    margin-top: 35px;
-  }
+    padding: 6px 15px 26px;
 
-  .sections__list.closed {
-    display: none;
+    &.accordeon-closed {
+      display: none;
+    }
   }
 }
