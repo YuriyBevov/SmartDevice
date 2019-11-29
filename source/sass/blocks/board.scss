@@ -94,7 +94,7 @@
 @media (max-width: $desktop-width) {
   .board__wrapper {
     padding-top: 35px;
-    padding-left: 75px;
+    padding-left: 73px;
   }
 
   .board__title {
@@ -152,6 +152,7 @@
     &::before {
       width: 33px;
       height: 2px;
+      top: 15px;
     }
   }
 

@@ -83,9 +83,9 @@
         <p class="board__description">
           производство и монтаж, поставка комплектующих, блоков и модулей
         </p>
-        <a href="#presentation" class="board__link">Скролл вниз</a>
-        <a href="#question-form" class="board__btn">Получить бесплатную консультацию</a>
-        <a href="#question-form" class="board__btn board__btn--mobile">Бесплатная консультация</a>
+        <a href="#presentation" class="board__link scroll-link">Скролл вниз</a>
+        <a href="#question-form" class="board__btn scroll-link">Получить бесплатную консультацию</a>
+        <a href="#question-form" class="board__btn board__btn--mobile scroll-link">Бесплатная консультация</a>
       </div>
     </div>
     </div>
@@ -202,7 +202,7 @@
             <label for="question__text" class="visually-hidden"></label>
             <textarea class="question__text" id="question__text" placeholder="Ваш вопрос" required=""></textarea>
             <div class="question__form-btns">
-              <input type="checkbox" id="question__checkbox" class="question__accept">
+              <input type="checkbox" id="question__checkbox" class="question__accept" checked="">
               <label for="question__checkbox" class="question__checkbox">Я согласен на обработку персональных данных</label>
               <input type="submit" class="question__submit" value="Задать вопрос">
             </div>
@@ -323,9 +323,12 @@
       </div>
       <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <form action="#" method="POST" class="modal__form">
-        <input type="text" class="modal__input modal__name" placeholder="Имя" value="" required="">
+        <label for="modal__name" class="visually-hidden"></label>
+        <input type="text" class="modal__input modal__name" id="modal__name" placeholder="Имя" value="" required="">
+        <label for="phone-mask" class="visually-hidden"></label>
         <input type="text" class="modal__input modal__phone" id="phone-mask" placeholder="Телефон" value="" required="">
-        <textarea class="modal__text" placeholder="Ваш вопрос" required=""></textarea>
+        <label for="modal__text" class="visually-hidden"></label>
+        <textarea class="modal__text" id="modal__text" placeholder="Ваш вопрос" required="">Ваш вопрос</textarea>
         <div class="modal__form-btns">
           <input type="checkbox" id="modal__checkbox" class="modal__accept">
           <label for="modal__checkbox" class="modal__checkbox">Я согласен на обработку персональных данных</label>

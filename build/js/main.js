@@ -20,7 +20,7 @@
   var onBtnClickEvent = function (evt) {
     evt.preventDefault();
     modal.classList.remove('modal--closed');
-    html.style.overflow = 'hidden';
+    html.style.overflowY = 'hidden';
     setFocus();
     document.addEventListener('keydown', onPressEsc);
     modal.addEventListener('click', onOverlayClickEvent);
@@ -31,7 +31,7 @@
 
   var onCloseBtnEvent = function () {
     modal.classList.add('modal--closed');
-    html.style.overflow = 'scroll';
+    html.style.overflowY = 'scroll';
   };
 
   var onPressEsc = function (evt) {
@@ -44,7 +44,7 @@
   var onOverlayClickEvent = function (evt) {
     if (evt.target === modal) {
       modal.classList.add('modal--closed');
-      html.style.overflow = 'scroll';
+      html.style.overflowY = 'scroll';
       modal.removeEventListener('click', onOverlayClickEvent);
     }
   };
@@ -99,6 +99,20 @@
     }
   };
 
+  // убераю null в ie11
+
+  var textarea = document.querySelector('.modal__text');
+
+  if(textarea.value === null) {
+    //alert('ok')
+  } else {
+    //alert('error')
+    textarea.innerHTML= 'question';
+    textarea.value = 'question';
+    textarea.setAttribute('placeholder', 'question');
+    textarea.textContent = 'vopros';
+  }
+
   formSubmit.addEventListener("click", formValidityCheck);
 })();
 
@@ -142,24 +156,31 @@
 // скролл вниз к якорю()
 
 (function () {
-  var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
+  var linkNav = document.querySelectorAll('.scroll-link');
 
-  var animationTime = 500;
-  var framesCount = 20;
+  var SPEED = 0.5;
+  for (var i = 0; i < linkNav.length; i++) {
+    linkNav[i].addEventListener('click', function(evt) {
+        evt.preventDefault();
 
-  anchors.forEach(function(item) {
-    item.addEventListener('click', function(evt) {
-      evt.preventDefault();
-      var coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
-      var scroller = setInterval(function() {
-        var scrollBy = coordY / framesCount;
-        if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-          window.scrollBy(0, scrollBy);
-        } else {
-          window.scrollTo(0, coordY);
-          clearInterval(scroller);
+        var height = window.pageYOffset;
+        var hash = this.href.replace(/[^#]*(.*)/, '$1');
+        var top = document.querySelector(hash).getBoundingClientRect().top;
+        var start = null;
+
+        requestAnimationFrame(step);
+
+        function step(time) {
+            if (start === null) start = time;
+            var progress = time - start;
+            var result = (top < 0 ? Math.max(height - progress/SPEED, height + top) : Math.min(height + progress/SPEED, height + top));
+            window.scrollTo(0,result);
+            if (result != height + top) {
+                requestAnimationFrame(step)
+            } else {
+                location.hash = hash;
+            }
         }
-      }, animationTime / framesCount);
-    });
-  });
+    }, false);
+  }
 })();

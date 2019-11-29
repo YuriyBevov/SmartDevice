@@ -1,13 +1,13 @@
 .company__wrapper {
   position: relative;
-  padding-left: 178px;
-  padding-right: 15px;
+  padding-left: 194px;
+  padding-right: 30px;
 
 
   &::before {
     position: absolute;
-    top: 4px;
-    left: -30px;
+    top: 5px;
+    left: -14px;
     width: 150px;
     height: 317px;
     content: "";
@@ -28,7 +28,7 @@
   @include font($font: $title, $size: 36px, $height: 51px);
 
   margin: 0;
-  margin-bottom: 17px;
+  margin-bottom: 15px;
   color: $primary-grey;
   padding-left: 2px;
   font-weight: normal;
@@ -46,7 +46,7 @@
   }
 
   &--partners {
-    margin-bottom: 41px;
+    margin-bottom: 43px;
   }
 }
 

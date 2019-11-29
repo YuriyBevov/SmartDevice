@@ -5,7 +5,7 @@
   background-image: url("../img/bg-question.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 61%;
 
   @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
     background-image: url("../img/bg-question2x.jpg");
@@ -99,6 +99,7 @@
   flex-grow: 1;
   padding-left: 17px;
   margin-bottom: 43px;
+  border-radius: 0;
   background-color: rgba(255, 255, 255, 0.1);
   color: $white;
 }
@@ -123,6 +124,7 @@
   margin-bottom: 41px;
   border: none;
   resize: none;
+  border-radius: 0;
   background-color: rgba(255, 255, 255, 0.1);
   color: $white;
 
