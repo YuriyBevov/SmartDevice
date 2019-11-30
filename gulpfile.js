@@ -29,15 +29,11 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-// мои таски
-
 gulp.task("js", function(){
   return gulp.src("source/js/**.js")
   .pipe(plumber())
   .pipe(gulp.dest("build/js"));
 });
-
-// --
 
 gulp.task("server", function () {
   server.init({

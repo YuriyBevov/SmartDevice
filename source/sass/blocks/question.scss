@@ -179,14 +179,14 @@
 
 @media (max-width: $desktop-width) {
   .question {
-    min-height: 666px;
+    min-height: 664px;
     background: $blue;
   }
 
   .question__wrapper {
     width: 76.733766%;
     padding: 0;
-    padding-top: 82px;
+    padding-top: 80px;
 
     &::before {
       background-image: none;

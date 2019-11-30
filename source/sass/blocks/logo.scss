@@ -51,6 +51,16 @@
 }
 
 @media (max-width: $desktop-width) {
+  .logo__wrapper {
+    padding-top: 24px;
+    padding-left: 78px;
+
+      &::before {
+      top: 18px;
+      left: 10px;
+    }
+  }
+
   .logo__title {
     display: block;
     margin-bottom: 2px;
