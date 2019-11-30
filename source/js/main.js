@@ -26,7 +26,7 @@
     modal.addEventListener('click', onOverlayClickEvent);
     name.value = localStorage.getItem('name');
     phone.value = localStorage.getItem('phone');
-    text.value = localStorage.getItem('text');
+    text.textContent = localStorage.getItem('text');
   };
 
   var onCloseBtnEvent = function () {
@@ -98,20 +98,6 @@
       formDescription.style.color = '#ffffff'
     }
   };
-
-  // убераю null в ie11
-
-  var textarea = document.querySelector('.modal__text');
-
-  if(textarea.value === null) {
-    //alert('ok')
-  } else {
-    //alert('error')
-    textarea.innerHTML= 'question';
-    textarea.value = 'question';
-    textarea.setAttribute('placeholder', 'question');
-    textarea.textContent = 'vopros';
-  }
 
   formSubmit.addEventListener("click", formValidityCheck);
 })();

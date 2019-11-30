@@ -102,11 +102,17 @@
     justify-content: space-between;
     padding: 29px 15px 26px;
     cursor: pointer;
+
+    &:focus .sections__text,
+    &:hover .sections__text {
+      color: $blue;
+    }
   }
 
   .sections__text {
     margin: 0;
     padding-left: 0;
+    transition: color 0.3s;
   }
 
   .sections__btn {

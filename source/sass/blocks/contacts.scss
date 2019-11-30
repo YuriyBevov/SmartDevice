@@ -92,6 +92,11 @@
     justify-content: space-between;
     padding: 29px 15px 26px;
     cursor: pointer;
+
+    &:focus .contacts__text,
+    &:hover .contacts__text {
+      color: $blue;
+    }
   }
 
   .contacts__content {
@@ -107,6 +112,7 @@
   .contacts__text {
     padding: 0;
     margin: 0;
+    transition: color 0.3s;
   }
 
   .contacts__btn {
@@ -127,7 +133,6 @@
       background-size: 16px 16px;
       background-position: 50% 50%;
     }
-
   }
 
   .contacts__address {

@@ -140,7 +140,6 @@
 
   .presentation__item {
     padding: 25px 10px 19px 25px;
-    min-height: 100%;
 
     & svg {
       margin-bottom: 3px;
@@ -200,7 +199,7 @@
   }
 
   .presentation__company {
-    padding: 0 0px;
+    padding: 0;
   }
 }
 
